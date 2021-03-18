@@ -3,9 +3,7 @@
     <div class="row">
         <div class="col-md-6 col-xs-12 left-links">
             
-    <h1 class=" animate__animated animate__heartBeat animate__infinite  ">
-        Social Links
-    </h1>
+    <h2 class=" animate__animated animate__heartBeat animate__infinite  ">Social Links </h2>
     <br>
 
     <div class="social_box">
@@ -39,7 +37,7 @@
 
 
 
-  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
 <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -48,6 +46,32 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
          <!--Scrolling Effect--> 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script>
+
+function StickyHeader() {
+  var header = document.getElementById("header") ;
+  var sticky = header.offsetTop + 500 ;
+  var stick = header.offsetTop + 1400;
+if (window.pageYOffset > sticky && window.pageYOffset < stick) {
+  // header.style.backgroundColor=" rgba(7, 18, 54, 0.904)";
+     header.classList.add("scrollHeader") ;
+} 
+else if(window.pageYOffset>stick){
+  header.classList.remove("scrollHeader") ;
+}
+
+else {
+  // header.style.backgroundColor=" rgba(0, 0, 0, 0.00)";
+     header.classList.remove("scrollHeader") ;
+
+  }
+}
+
+
+
+  window.onscroll = function() { StickyHeader() };
+</script>
 <script>
 AOS.init({
 
@@ -282,5 +306,33 @@ var sphereAnimation = (function() {
 
   staggersAnimation.play();
 </script>
+<script>
+  const button = document.getElementById("runaway-btn");
+
+const animateMove = (element, prop, pixels) =>
+  anime({
+    targets: element,
+    [prop]: `${pixels}px`,
+    easing: "easeOutCirc"
+  });
+
+["mouseover", "click"].forEach(function (el) {
+  button.addEventListener(el, function (event) {
+    const top = getRandomNumber(window.innerHeight - this.offsetHeight);
+    const left = getRandomNumber(window.innerWidth - this.offsetWidth);
+
+    animateMove(this, "left", left).play();
+    animateMove(this, "top", top).play();
+  });
+});
+
+const getRandomNumber = (num) => {
+  return Math.floor(Math.random() * (num + 1));
+};
+
+</script>
+
+
+
 </body>
 </html>

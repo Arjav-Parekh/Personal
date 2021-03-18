@@ -3,6 +3,13 @@ html{
   
 }
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
 
 body{
   font-family: 'Epilogue';
@@ -144,7 +151,7 @@ a.middle:hover:before {
       width: 100%;
       z-index: 0;
       text-align: center;
-      margin-top: 10%;
+      margin-top: 15%;
       position: sticky;
       
   }
@@ -462,7 +469,6 @@ a.middle:hover:before {
 .bottom-container h1{
   line-height: 5rem;
   letter-spacing: 1.1rem;
-  font-weight: ;
 }
 
 .footer{
@@ -517,3 +523,59 @@ a.middle:hover:before {
     transform: scaleX(1);
   }
 
+  #runaway-btn {
+    position: relative;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 4rem;
+    width: fit-content;
+    font-size: 1.5rem;
+    padding: 10px;
+    color:white;
+    border-radius: 5px;
+    border: none;
+    /* box-shadow: 5px 5px 14px rgb(82, 82, 82); */
+    background-color: rgb(61, 0, 0);
+    margin-top: 20%;
+  }
+
+  .about-top{
+
+    overflow: visible;
+    background: #000046;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .scrollHeader{
+    background-color: rgba(29, 29, 29, 0.479);
+  }
+
+  .top{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top:0;
+
+  }
+
+.div-mob{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 30% 5% 5% 5%;
+  display: none;
+}
+
+  @media (max-width:1000px){
+    .top, .sphere-animation,.top-container,.bottom-container,.mid-container,.footer,.about-top{
+      display: none;
+    }
+
+    .div-mob{
+      display: block;
+    }
+  }
