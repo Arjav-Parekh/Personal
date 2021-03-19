@@ -1,0 +1,57 @@
+<%- include('partials/header') %>
+<!-- 
+<span class="loader"><span class="loader-inner"></span></span> -->
+<div id="vantajs" >
+<div class="contact-con">
+<div class="row" style="width: 100%;">
+    <div class="col-md-6 left-text-contact" style="width: 100%;  padding-right: 0;">
+        <h2 class="animate__animated animate__zoomInDown animate__delay-1s">Hi!</h2>
+        <h2 class="animate__animated animate__rollIn animate__delay-2s">You can leave a message here ----> </h2>
+
+    </div>
+    <div class="col-md-6" style=" width: 100%; padding-right: 0;">
+ 
+            <div class="container animate__animated animate__zoomInUp animate__delay-2s">
+                <form action="/action_page.php">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              
+                  <label for="country">Email Address</label>
+                  <input type="text" id="email" name="lastname" placeholder="Your Email..">
+
+                  <label for="subject">Message</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              
+                  <div class="button">
+                    <div class="text">Submit</div>
+                  </div>
+                  <div class="progress-bar"></div>
+                  <svg class="tick" x="0px" y="0px"
+                     viewBox="0 0 25 30" style="enable-background:new 0 0 25 30;">
+                    <path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
+                  </svg>
+                </form>
+              </div>
+
+            
+    </div>
+</div>
+</div>
+
+
+
+        <div class="loader-wrapper con">
+            <span class="loader"><span class="loader-inner"></span></span>
+
+        </div>
+
+
+
+</div>
+
+
+
+<%- include('partials/footer') %>

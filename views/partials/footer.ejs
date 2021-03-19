@@ -14,7 +14,7 @@
         <a href="https://www.instagram.com/arjavparekh/" ><i class="fab fa-instagram fa-2x" style="color:white; "></i></a>
         <a href="https://www.github.com/Arjav-Parekh"><i class="fab fa-github fa-2x" aria-hidden="true" style="color:white; margin-left:8%;"></i></a>
     
-        <a href="https://www.facebook.com/djskronosindia"><i class="fab fa-facebook fa-2x" style="color:white; margin-left:8%;"></i></a>
+        <a href=""><i class="fab fa-facebook fa-2x" style="color:white; margin-left:8%;"></i></a>
         <a href="https://www.linkedin.com/in/arjav-parekh-91b8971a3"><i class="fab fa-linkedin-in fa-2x"  style="color:white; margin-left:8%;" ></i></a>
   
 
@@ -23,10 +23,10 @@
         </div>
 
         <div class="col-md-6 col-xs-12 right-foot">
-           <a href="">Home</a> |
-            <a href="">Projects</a> |
-            <a href="">About Me</a> |
-            <a href="">Contact Me</a>
+           <a href="/">Home</a> |
+            <a href="/projects">Projects</a> |
+            <a href="/about">About Me</a> |
+            <a href="/contact">Contact Me</a>
      
         </div>
 
@@ -37,7 +37,8 @@
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+
+
 <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -46,6 +47,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
          <!--Scrolling Effect--> 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.waves.min.js"></script>
 
 <script>
 
@@ -72,6 +79,9 @@ else {
 
   window.onscroll = function() { StickyHeader() };
 </script>
+
+
+
 <script>
 AOS.init({
 
@@ -80,6 +90,41 @@ AOS.init({
     duration: 600, // values from 0 to 3000, with step 50ms
 });
 </script>
+
+<script>
+  VANTA.NET({
+    el: "#vantajs",
+    mouseControls: true,
+    // touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0xffffff,
+    backgroundColor: 0x1b,
+    points: 14.00,
+    maxDistance: 22.00,
+    spacing: 17.00
+  })
+  
+  </script>
+
+<script>
+  VANTA.WAVES({
+    el: "#vantajs2",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x2a0000
+  })
+  
+  </script>
+
 <script>
     function fitElementToParent(el, padding) {
   var timeout = null;
@@ -167,6 +212,9 @@ var sphereAnimation = (function() {
 
 })();
 </script>
+
+
+
 <script>
     document.addEventListener('DOMContentLoaded',function(event){
   // array with texts to type in typewriter
@@ -211,6 +259,72 @@ var sphereAnimation = (function() {
   StartTextAnimation(0);
 });
 </script>
+
+
+<script>
+var basicTimeline = anime.timeline({
+  autoplay: false
+});
+
+var pathEls = $(".check");
+for (var i = 0; i < pathEls.length; i++) {
+  var pathEl = pathEls[i];
+  var offset = anime.setDashoffset(pathEl);
+  pathEl.setAttribute("stroke-dashoffset", offset);
+}
+
+basicTimeline
+  .add({
+    targets: ".text",
+    duration: 1,
+    opacity: "0"
+  })
+  .add({
+    targets: ".button",
+    duration: 1300,
+    height: 10,
+    width: 300,
+    backgroundColor: "#2B2D2F",
+    border: "0",
+    borderRadius: 100
+  })
+  .add({
+    targets: ".progress-bar",
+    duration: 2000,
+    width: 300,
+    easing: "linear"
+  })
+  .add({
+    targets: ".button",
+    width: 0,
+    duration: 1
+  })
+  .add({
+    targets: ".progress-bar",
+    width: 80,
+    height: 80,
+    delay: 500,
+    duration: 750,
+    borderRadius: 80,
+    backgroundColor: "#71DFBE"
+  })
+  .add({
+    targets: pathEl,
+    strokeDashoffset: [offset, 0],
+    duration: 200,
+    easing: "easeInOutSine"
+  });
+
+$(".button").click(function() {
+  basicTimeline.play();
+});
+
+$(".text").click(function() {
+  basicTimeline.play();
+});
+
+</script>
+
 <script>
   const staggerVisualizerEl = document.querySelector('.stagger-visualizer');
   const fragment = document.createDocumentFragment();
@@ -332,6 +446,13 @@ const getRandomNumber = (num) => {
 
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+
+<script>
+  $(window).on("load",function(){
+  $(".loader-wrapper").fadeOut("slow");
+});
+</script>
 
 
 </body>
