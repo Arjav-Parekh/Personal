@@ -547,7 +547,7 @@ a.middle:hover:before {
   .about-top{
     margin-top: 10%;
     width: 100%;
-
+    /* font-family: 'Montserrat' */
   }
 
   .scrollHeader{
@@ -761,7 +761,7 @@ span{
 
 .about-top h2{
   font-size: 6em;
-  color: #ff0b69;
+  color: #ff0b7d;
   font-weight: 600;
   /* display: inline-block; */
   text-shadow: 5px 5px 15px black;
@@ -784,13 +784,14 @@ span{
 
 .txt-col h3{
   font-size: 2em;
-  color: #ffa6c8;
+  color: #ff8ab7;
 }
 
 .txt-col h4{
   font-size: 1.4em;
   line-height: 42px;
-  color: rgb(161, 161, 161);
+  /* color: rgb(161, 161, 161); */
+  color: white;
 }
 .atv{
   /* height: 14%;
@@ -806,11 +807,58 @@ span{
 }
 
 @keyframes example {
-  from {left:-10%; }
-  to {left: 60%; visibility: hidden;}
+  from {left:-13%; }
+  to {left: 55%; visibility: hidden;}
 
 }
 
-img .animate__animated .animate__fadeInLeftBig {
-  --animate-delay: 2s;
+
+#cd-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 49%;
+  height: 80%;
+  width:5px;
+  background-color: #21D4FD;
+  background-image: linear-gradient(0deg, #21D4FD 0%, #B721FF 100%);
+  box-shadow: 4px 4px 18px black;
+  
+}
+
+.timeline1{
+
+
+  font-size:25px;
+  font-weight: 600;
+  font-family: 'Karla';
+  padding: 6px 12px 6px 12px;
+  border: 2px solid white;
+  border-radius: 10px;
+  
+  background-color: #FBDA61;
+background-image: linear-gradient(90deg, #FBDA61 0%, #FF5ACD 100%);
+box-shadow: -5px 5px 18px  black;
+  position: absolute;
+  right: 0;
+}
+
+.timeline2{
+
+
+  font-size:25px;
+  font-weight: 600;
+  font-family: 'Karla';
+  padding: 6px 12px 6px 12px;
+  border: 2px solid white;
+  border-radius: 10px;
+  
+  background-color: #FBDA61;
+background-image: linear-gradient(90deg, #FBDA61 0%, #FF5ACD 100%);
+box-shadow: 5px 5px 18px black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
 }
