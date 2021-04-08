@@ -53,6 +53,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.waves.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.rings.min.js"></script>
 
 <script>
 
@@ -127,6 +128,36 @@ AOS.init({
   })
   
   </script>
+
+
+<script>
+VANTA.RINGS({
+  el: "#vantajs3",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 0.8,
+  scaleMobile: 1.00,
+  backgroundColor: 0x0
+})
+</script>
+
+<!-- <script>
+  VANTA.CLOUDS2({
+    el: "#vantajs3",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    texturePath: "../noise.png"
+  })
+</script>
+ -->
+
 
 <script>
     function fitElementToParent(el, padding) {
